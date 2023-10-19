@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "exactOptionalPropertyTypes": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+
+        "baseUrl": "./",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "paths": {
+            "@pixi/webworker-plugins": [
+                "src"
+            ]
+        },
+
+        "esModuleInterop": true,
+
+        "lib": ["ESNext"],
+        "target": "es2020"
+    },
+    "exclude": [
+        "node_modules",
+        "lib/**",
+        "test/**",
+        "**/*.worker.ts"
+    ]
+}

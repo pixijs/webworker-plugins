@@ -1,0 +1,103 @@
+{
+    "name": "@pixi/webworker-plugins",
+    "version": "0.1.0-alpha",
+    "description": "Plugins for Web Workers",
+    "keywords": [
+        "jest",
+        "jest-plugin",
+        "jest-transform",
+        "rollup",
+        "rollup-plugin",
+        "web-worker",
+        "webworker",
+        "worker"
+    ],
+    "license": "MIT",
+    "author": "SuperSodaSea",
+    "contributors": [
+        "SuperSodaSea <bobby825@126.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pixijs/webworker-plugins.git"
+    },
+    "homepage": "https://github.com/pixijs/webworker-plugins",
+    "bugs": "https://github.com/pixijs/webworker-plugins/issues",
+    "files": [
+        "lib",
+        "*.d.ts"
+    ],
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./lib/index.d.ts",
+                "default": "./lib/index.mjs"
+            },
+            "require": {
+                "types": "./lib/index.d.ts",
+                "default": "./lib/index.js"
+            }
+        },
+        "./jest-transform": {
+            "import": {
+                "types": "./lib/jest-transform/index.d.ts",
+                "default": "./lib/jest-transform/index.mjs"
+            },
+            "require": {
+                "types": "./lib/jest-transform/index.d.ts",
+                "default": "./lib/jest-transform/index.js"
+            }
+        },
+        "./rollup-plugin": {
+            "import": {
+                "types": "./lib/rollup-plugin/index.d.ts",
+                "default": "./lib/rollup-plugin/index.mjs"
+            },
+            "require": {
+                "types": "./lib/rollup-plugin/index.d.ts",
+                "default": "./lib/rollup-plugin/index.js"
+            }
+        }
+    },
+    "scripts": {
+        "clean": "run-s clean:*",
+        "clean:build": "rimraf lib",
+        "clean:types": "rimraf lib/**/*.d.ts",
+        "lint": "eslint --cache --ext .ts . --ignore-path .gitignore --max-warnings 0",
+        "lintfix": "run-s \"lint -- --fix\"",
+        "types": "tsc --noEmit",
+        "types:test": "tsc -p tsconfig.test.json --noEmit",
+        "types:worker": "tsc -p tsconfig.worker.json --noEmit",
+        "prebuild": "run-s clean:build",
+        "build": "rollup -c --failAfterWarnings",
+        "prebuild:types": "run-s clean:types",
+        "build:types": "tsc -p tsconfig.types.json",
+        "watch": "rollup -cw",
+        "test": "npx jest --silent",
+        "dist": "run-s lint types types:test types:worker types:worker build build:types",
+        "publish": "npm publish"
+    },
+    "peerDependencies": {
+        "@jest/transform": ">=26 <27",
+        "jest": ">=26 <27",
+        "rollup": ">=3",
+        "ts-jest": ">=26 <27"
+    },
+    "devDependencies": {
+        "@pixi/eslint-config": "^4.0.1",
+        "@rollup/plugin-commonjs": "^25.0.5",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@types/jest": "^26.0.24",
+        "@types/node": "^15.14.9",
+        "esbuild": "^0.19.4",
+        "eslint": "^8.51.0",
+        "jest": "^26.6.3",
+        "jest-electron": "^0.1.12",
+        "jest-extended": "^1.2.1",
+        "npm-run-all": "^4.1.5",
+        "rollup": "^3.29.4",
+        "rollup-plugin-esbuild": "^6.1.0",
+        "ts-jest": "^26.5.6",
+        "typescript": "~4.9.5"
+    }
+}

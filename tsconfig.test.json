@@ -1,0 +1,17 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "types": ["jest"],
+        "lib": ["ES6", "DOM"]
+    },
+    "include": [
+        "test/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "src/**",
+        "lib/**",
+        "**/*.worker.ts"
+    ],
+    "references": []
+}
