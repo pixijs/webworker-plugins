@@ -42,9 +42,9 @@ Add the following code to your **rollup.config.mjs**:
 import webworker from '@pixi/webworker-plugins/rollup-plugin';
 
 export default {
-	plugins: [
+    plugins: [
         webworker(),
-	],
+    ],
     // ...
 };
 ```
