@@ -75,7 +75,7 @@
         "watch": "rollup -cw",
         "test": "npx jest --silent",
         "dist": "run-s lint types types:test types:worker types:worker build build:types",
-        "publish": "npm publish"
+        "publish-ci": "npm publish"
     },
     "peerDependencies": {
         "@jest/transform": ">=26 <27",
