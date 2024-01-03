@@ -4,6 +4,10 @@
 
 Plugins for Web Workers.
 
+```ts
+import FooWorker from 'worker:./foo.worker.ts';
+```
+
 
 ## Install
 
@@ -24,6 +28,9 @@ Add the following code to your **jest.config.js**:
 module.exports = {
     transform: {
         '\\.worker.ts$': '@pixi/webworker-plugins/lib/jest-transform',
+    },
+    moduleNameMapper: {
+        '^worker:(.*)$': '$1',
     },
     // ...
 };
