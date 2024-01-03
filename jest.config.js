@@ -10,6 +10,7 @@ module.exports = {
         '\\.worker.ts$': '<rootDir>/lib/jest-transform',
     },
     moduleNameMapper: {
+        '^worker:(.*)$': '$1',
         '^@pixi/webworker-plugins$': '<rootDir>/src',
     },
     testMatch: ['**/*.tests.ts'],

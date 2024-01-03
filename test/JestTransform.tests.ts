@@ -1,4 +1,4 @@
-import AdderWorker from './workers/Adder.worker.ts';
+import AdderWorker from 'worker:./workers/Adder.worker.ts';
 
 describe('Test', () =>
 {

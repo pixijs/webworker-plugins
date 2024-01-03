@@ -8,7 +8,7 @@ const VIRTUAL_MODULE_PREFIX = `\0${PLUGIN_NAME}:`;
 
 const DEFAULT_OPTIONS = {
     worker: {
-        pattern: /(.+\.worker\.[cm]?[jt]s)/,
+        pattern: /worker:(.+\.worker\.[cm]?[jt]s)/,
         assertionType: 'worker',
     },
 };
