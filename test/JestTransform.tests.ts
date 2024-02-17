@@ -7,13 +7,13 @@ describe('Test', () =>
         {
             const worker = new AdderWorker();
 
-            worker.onmessage = (event) =>
+            worker.worker.onmessage = (event) =>
             {
                 expect(event.data).toBe(2);
                 resolve();
             };
 
-            worker.postMessage({ a: 1, b: 1 });
+            worker.worker.postMessage({ a: 1, b: 1 });
         })
     );
 });

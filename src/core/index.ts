@@ -5,7 +5,7 @@ export function buildWorkerCode(source: string, moduleType: ModuleType)
     let result = `\
 const WORKER_CODE = ${JSON.stringify(source)};
 let WORKER_URL = null;
-class WorkerInstance extends Worker
+class WorkerInstance
 {
     constructor()
     {
@@ -13,7 +13,7 @@ class WorkerInstance extends Worker
         {
             WORKER_URL = URL.createObjectURL(new Blob([WORKER_CODE], { type: 'application/javascript' }));
         }
-        super(WORKER_URL);
+        this.worker = new Worker(WORKER_URL);
     }
 }
 WorkerInstance.revokeObjectURL = function revokeObjectURL()
