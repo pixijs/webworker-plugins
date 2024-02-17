@@ -1,6 +1,6 @@
 import AdderWorker from 'worker:./workers/Adder.worker.ts';
 
-describe('Test', () =>
+describe('JestTransform', () =>
 {
     it('should work', async () =>
         new Promise<void>((resolve) =>
