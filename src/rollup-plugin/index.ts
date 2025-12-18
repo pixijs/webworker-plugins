@@ -33,7 +33,7 @@ export default (() =>
         {
             let importee = null;
 
-            const assertType = options.assertions.type;
+            const assertType = options.attributes.type;
 
             if (assertType === DEFAULT_OPTIONS.worker.assertionType) importee = source;
             else
@@ -81,7 +81,7 @@ export default (() =>
 
             return {
                 code,
-                assertions: { type: DEFAULT_OPTIONS.worker.assertionType },
+                attributes: { type: DEFAULT_OPTIONS.worker.assertionType },
             };
         },
     } as Plugin;

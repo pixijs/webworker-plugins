@@ -2,7 +2,7 @@ import path from 'node:path';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
-import repo from './package.json' assert { type: 'json' };
+import repo from './package.json' with { type: 'json' };
 
 export default () =>
 {

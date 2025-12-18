@@ -83,13 +83,13 @@
     "peerDependencies": {
         "@jest/transform": ">=26 <27",
         "jest": ">=26 <27",
-        "rollup": ">=3",
+        "rollup": ">=4",
         "ts-jest": ">=26 <27"
     },
     "devDependencies": {
         "@pixi/eslint-config": "^4.0.1",
-        "@rollup/plugin-commonjs": "^25.0.5",
-        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
         "@types/jest": "^26.0.24",
         "@types/node": "^15.14.9",
         "esbuild": "^0.19.4",
@@ -98,8 +98,8 @@
         "jest-electron": "^0.1.12",
         "jest-extended": "^1.2.1",
         "npm-run-all": "^4.1.5",
-        "rollup": "^3.29.4",
-        "rollup-plugin-esbuild": "^6.1.0",
+        "rollup": "^4.53.3",
+        "rollup-plugin-esbuild": "^6.2.1",
         "ts-jest": "^26.5.6",
         "typescript": "^5.0.0"
     }
